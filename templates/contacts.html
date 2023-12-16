@@ -1,0 +1,24 @@
+{% extends "homepage.html" %}
+{% block title %}Контакты{% endblock%}
+{% block content %} 
+
+    <form method='post' action='{% url 'contactPost' %}' class="row gx-3 gy-2 align-items-center">
+        {% csrf_token %}
+        <div class="col-sm-3">
+          <label class="visually-hidden" for="specificSizeInputName">Name</label>
+          <input name='fullname' type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+        </div>
+        <div class="col-sm-3">
+          <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+          <div class="input-group">
+            <div class="input-group-text">@</div>
+            <input name='mail' type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+        </div>
+        </div>
+        
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+
+{% endblock %}    

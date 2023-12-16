@@ -1,0 +1,17 @@
+{% extends "homepage.html" %}
+
+{% block title %}Главная страница{% endblock%}
+
+{% block content %} 
+
+    <h1>name - {{name}}</h1>
+    <h2>lastname - {{lastname}}</h2>
+    <h3>age - {{age}}</h3>
+    <h4>address - {{address}}</h4>
+    
+    <br>
+    {% for item in students %}
+        <h3>{{item}}</h3>
+    {% endfor %}
+
+{% endblock %}  

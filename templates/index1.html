@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+    <h1>Информация</h1>
+    <h4>Информация обо мне</h4>
+    <h5>Много информации</h5>
+
+    {% for student in students %}
+        <h1>{{student.name}}{{student.lastname}}{{student.age}}</h1>
+    {% endfor %}
+
+</body>
+</html>
